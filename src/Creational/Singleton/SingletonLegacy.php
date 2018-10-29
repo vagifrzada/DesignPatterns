@@ -7,7 +7,7 @@ class SingletonLegacy
 	/**
 	 * This stores the only instance of class
 	 * 
-	 * @var null|SingletonLegacy
+	 * @var null|object
 	 */
 	private static $instance = null;
 
@@ -31,12 +31,12 @@ class SingletonLegacy
 	private function __construct() {}
 
     /**
-     * Don't allow the cloning
+     * Don't allow cloning the object
      */
     private function __clone() {}
 
     /**
-     * Don't allow serialization
+     * Don't allow un-serializing the object
      */
     private function __wakeup() {}
 }

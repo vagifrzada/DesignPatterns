@@ -14,4 +14,16 @@ class SingletonTest extends TestCase
 
         $this->assertSame($obj, $obj2);
     }
+
+    public function testModernApproachOfSingletonUsingInheritance()
+    {
+        $database = Database::getInstance();
+        $database->setDsn('mysql://...');
+
+        $database2 = Database::getInstance();
+        $database2->setDsn('postgres://...');
+
+        $this->assertSame($database, $database2);
+        $this->assertEquals($database->getDsn(), $database2->getDsn());
+    }
 }

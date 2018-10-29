@@ -31,13 +31,13 @@ class SingletonModern
 	 */
 	protected function __construct() {}
 
-	/**
-	 * Don't allow the cloning.
-	 */
-	private function __clone() {}
+    /**
+     * Don't allow cloning the object
+     */
+    private function __clone() {}
 
-	/**
-	 * Don't allow serialization of this object.
-	 */
-	private function __wakeup() {}
+    /**
+     * Don't allow un-serializing the object
+     */
+    private function __wakeup() {}
 }
