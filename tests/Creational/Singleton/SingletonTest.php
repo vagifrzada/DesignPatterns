@@ -9,8 +9,8 @@ class SingletonTest extends TestCase
 {
     public function testSingletonLegacyVersion()
     {
-        $obj  = SingletonLegacy::init();
-        $obj2 = SingletonLegacy::init();
+        $obj  = SingletonLegacy::getInstance();
+        $obj2 = SingletonLegacy::getInstance();
 
         $this->assertSame($obj, $obj2);
     }

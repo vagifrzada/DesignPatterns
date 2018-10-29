@@ -16,7 +16,7 @@ class SingletonLegacy
 	 * 
 	 * @return SingletonLegacy
 	 */
-	public static function init(): self
+	public static function getInstance(): self
 	{
 		if (self::$instance === null) {
 			self::$instance = new self;

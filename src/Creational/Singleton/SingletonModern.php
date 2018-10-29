@@ -16,7 +16,7 @@ class SingletonModern
 	 * 
 	 * @return static
 	 */
-	public static function init()
+	public static function getInstance()
 	{
 		// Late static binding comes here...
 		if (self::$instance === null) {
