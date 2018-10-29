@@ -39,5 +39,5 @@ class SingletonModern
 	/**
 	 * Don't allow serialization of this object.
 	 */
-	private function __sleep() {}
+	private function __wakeup() {}
 }

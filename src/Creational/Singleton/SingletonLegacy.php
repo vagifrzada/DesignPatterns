@@ -38,5 +38,5 @@ class SingletonLegacy
     /**
      * Don't allow serialization
      */
-    private function __sleep() {}
+    private function __wakeup() {}
 }
