@@ -24,6 +24,6 @@ class SingletonTest extends TestCase
         $database2->setDsn('postgres://...');
 
         $this->assertSame($database, $database2);
-        $this->assertEquals($database->getDsn(), $database2->getDsn());
+        $this->assertEquals($database2->getDsn(), $database->getDsn());
     }
 }
