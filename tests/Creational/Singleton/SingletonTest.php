@@ -26,4 +26,10 @@ class SingletonTest extends TestCase
         $this->assertSame($database, $database2);
         $this->assertEquals($database2->getDsn(), $database->getDsn());
     }
+
+    public function testDataIsNotLost()
+    {
+        $database = Database::getInstance();
+        $this->assertEquals('postgres://...', $database->getDsn());
+    }
 }
